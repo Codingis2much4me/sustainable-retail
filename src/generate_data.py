@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+import config
 
 print("Starting data generation...")
 
@@ -46,7 +47,7 @@ for i in range(MONTHS_OF_DATA):
         })
 
 historical_df = pd.DataFrame(data)
-historical_df.to_csv('historical_data.csv', index=False)
+historical_df.to_csv(config.HISTORICAL_DATA, index=False) # Use config
 print(f"✅ Generated 'historical_data.csv' with {len(historical_df)} rows.")
 
 # --- 2. Generate Tactical Training Data (for sell-through model) ---
@@ -63,7 +64,7 @@ for days in [7, 6, 5, 4, 3, 2, 1]:
         })
 
 tactical_df = pd.DataFrame(tactical_data)
-tactical_df.to_csv('tactical_training_data.csv', index=False)
+tactical_df.to_csv(config.TACTICAL_TRAINING_DATA, index=False) # Use config
 print(f"✅ Generated 'tactical_training_data.csv' with {len(tactical_df)} rows.")
 
 
@@ -77,7 +78,7 @@ current_inventory = [
     {'product_id': 105, 'product_name': 'Artisan Bread', 'category': 'Bakery', 'avg_daily_sales': 40, 'current_stock': 90, 'expiry_date': (today + timedelta(days=0)).strftime('%Y-%m-%d')}
 ]
 current_inventory_df = pd.DataFrame(current_inventory)
-current_inventory_df.to_csv('current_inventory.csv', index=False)
+current_inventory_df.to_csv(config.CURRENT_INVENTORY, index=False) # Use config
 print("✅ Generated 'current_inventory.csv' for today.")
 
 print("\nData generation complete!")
