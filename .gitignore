@@ -1,0 +1,13 @@
+# Python cache
+__pycache__/
+
+# Generated data files
+data/
+
+# Trained models
+models/
+
+# Virtual environment (if you use one)
+venv/
+.venv/
+env/
