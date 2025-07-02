@@ -9,31 +9,6 @@ This project is a proof-of-concept AI system designed to help retailers optimize
 - **Data Generation**: Includes a script to generate synthetic, realistic datasets for training and demonstration.
 - **Interactive Dashboard**: A Streamlit application ([`src/app.py`](src/app.py)) provides an easy-to-use interface to view AI-driven recommendations.
 
-## Project Structure
-
-The project is organized to separate concerns, making it scalable and maintainable.
-
-```
-/
-├── src/                      # All source code
-│   ├── ai_core.py            # Core logic for AI predictions
-│   ├── app.py                # Main Streamlit application
-│   ├── config.py             # Centralized configuration for file paths
-│   ├── generate_data.py      # Script to create training/demo data
-│   ├── strategic_model_trainer.py # Trains the long-term model
-│   └── tactical_model_trainer.py  # Trains the short-term model
-├── data/                     # CSV data files (gitignored in a real project)
-│   ├── current_inventory.csv
-│   ├── historical_data.csv
-│   └── tactical_training_data.csv
-├── models/                   # Trained model artifacts (gitignored)
-│   ├── sell_through_model.joblib
-│   ├── stock_model.joblib
-│   └── waste_model.joblib
-├── requirements.txt          # Python package dependencies
-├── README.md                 # This file
-└── LICENSE                   # Project license
-```
 
 ## Setup and Installation
 
