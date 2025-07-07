@@ -1,5 +1,6 @@
+Flask
 pandas
 scikit-learn
 joblib
-streamlit
-plotly
+numpy
+Werkzeug
